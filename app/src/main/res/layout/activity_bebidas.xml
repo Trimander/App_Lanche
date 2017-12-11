@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app_lanche.BebidasActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/appBarLayout">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Fundo"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/appBarLayout">
+
+        <TextView
+            android:id="@+id/tvBebidas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bebidas"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:textSize="30dp"/>
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="80dp"
+            android:entries="@array/itensTamnho"
+            android:prompt="@string/tamanho"
+            android:layout_below="@+id/tvBebidas"
+            android:layout_alignParentStart="true"
+            android:background="@color/colorAccent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:scrollIndicators="right"
+            />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:entries="@array/itensBebida"
+            android:prompt="@string/bebida"
+            android:background="@color/colorAccent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:scrollIndicators="right"
+            android:layout_below="@+id/spinner1"
+            android:layout_marginTop="39dp"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/tvQuantidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantidade"
+            android:textSize="25dp"
+            android:layout_below="@+id/spinner2"
+            android:layout_toEndOf="@+id/btnVoltar"
+            android:layout_marginTop="54dp" />
+
+        <EditText
+            android:id="@+id/etQuantidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvQuantidade"
+            android:layout_alignTop="@+id/tvQuantidade"
+            android:layout_toEndOf="@+id/tvBebidas"
+            android:background="#FFFFFF"
+            android:ems="3"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/tvRS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ "
+            android:textSize="25dp"
+
+            android:layout_above="@+id/btnAdicionar"
+            android:layout_alignStart="@+id/tvBebidas"
+            android:layout_marginBottom="52dp" />
+
+        <TextView
+            android:id="@+id/tvPreco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tvRS"
+            android:layout_alignBottom="@+id/tvRS"
+            android:layout_toEndOf="@+id/tvRS"
+            android:text="0.0"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Próximo"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/btnAdicionar"
+            android:background="#93c128"
+            android:textColor="@color/colorAccent"/>
+
+        <Button
+            android:id="@+id/btnAdicionar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/btnVoltar"
+            android:background="#fff054"
+            android:textColor="@color/colorAccent"/>
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voltar"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="#fe374a"
+            android:textColor="@color/colorAccent"/>
+    </RelativeLayout>
+
+</RelativeLayout>

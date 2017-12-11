@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app_lanche">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CardapioActivity"
+            android:label="@string/title_activity_cardapio"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BebidasActivity"
+            android:label="@string/title_activity_bebidas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PagamentoActivity"
+            android:label="@string/title_activity_pagamento"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CarrinhoActivity"
+            android:label="@string/title_activity_carrinho"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".StatusActivity"
+            android:label="@string/title_activity_status"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AdicionarLancheActivity"
+            android:label="@string/title_activity_adicionar_lanche"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

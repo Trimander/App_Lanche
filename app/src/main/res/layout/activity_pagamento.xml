@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app_lanche.PagamentoActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBarLayout2"
+        android:background="@color/Fundo"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/tvFormaPagamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forma de Pagamento?"
+            android:textSize="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:id="@+id/RL2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_radius"
+            android:layout_below="@+id/tvFormaPagamento"
+            android:layout_alignParentStart="true">
+
+            <ImageButton
+                android:id="@+id/ibCartao"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                app:srcCompat="@drawable/cartao"
+                android:layout_marginStart="27dp"
+                android:layout_alignTop="@+id/ibDinheiro"
+                android:layout_alignParentStart="true"
+                android:background="@null"/>
+
+            <ImageButton
+                android:id="@+id/ibDinheiro"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                app:srcCompat="@drawable/dinheiro"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="27dp"
+                android:background="@null"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvEntrega"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RL2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="Onde devemos Entregar?"
+            android:textSize="25dp"/>
+
+        <LinearLayout
+            android:id="@+id/LL3"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/tvEntrega"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border_radius"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etEndereco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:ems="15"
+                android:gravity="center"
+                android:hint="Endereço"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/etComplemento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:ems="15"
+                android:gravity="center"
+                android:hint="Complemento"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voltar"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="#fe374a"
+            android:textColor="@color/colorAccent"/>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Próximo"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/btnVoltar"
+            android:background="#93c128"
+            android:textColor="@color/colorAccent"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

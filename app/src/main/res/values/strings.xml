@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Meus Pedidos</string>
+    <string name="tamanho">Escolha o tamanho</string>
+    <string name="bebida">Escolha a bebida</string>
+
+    <string-array name="itensTamnho">
+        <item>2 Litros</item>
+        <item>1,5 Litros</item>
+        <item>600 ml</item>
+        <item>Lata</item>
+    </string-array>
+
+    <string-array name="itensBebida">
+        <item>Guaraná</item>
+        <item>Coca-Cola</item>
+        <item>Fanta</item>
+        <item>Nenhum</item>
+    </string-array>
+    <string name="title_activity_cardapio">Cardápio</string>
+    <string name="title_activity_bebidas">Bebidas</string>
+    <string name="title_activity_pagamento">Pagamento &amp; Entrega</string>
+    <string name="title_activity_carrinho">Carrinho</string>
+    <string name="title_activity_status">Status</string>
+    <string name="title_activity_adicionar_lanche">Adicionar Lanche</string>
+
+</resources>

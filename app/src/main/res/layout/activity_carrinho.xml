@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app_lanche.CarrinhoActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/appBarLayout3">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Fundo"
+        android:layout_below="@+id/appBarLayout3">
+
+        <TextView
+            android:id="@+id/tvConferirPedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confira seu pedido"
+            android:layout_marginTop="10dp"
+            android:textSize="25dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout2"
+            android:layout_below="@+id/tvConferirPedido"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border_radius">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvBebidas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Bebidas"
+            android:layout_below="@+id/linearLayout2"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:textSize="25dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/tvBebidas"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/border_radius"
+            android:id="@+id/linearLayout3">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvRS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ "
+            android:textSize="20dp"
+            android:layout_alignBaseline="@+id/tvPreco"
+            android:layout_alignBottom="@+id/tvPreco"
+            android:layout_toStartOf="@+id/tvPreco" />
+
+        <TextView
+            android:id="@+id/tvPreco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textSize="20dp"
+            android:layout_below="@+id/linearLayout3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"/>
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voltar"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="#fe374a"
+            android:textColor="@color/colorAccent"/>
+
+        <Button
+            android:id="@+id/btnFinalizar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Finalizar"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:background="#93c128"
+            android:textColor="@color/colorAccent"
+            android:layout_toEndOf="@+id/tvBebidas" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
