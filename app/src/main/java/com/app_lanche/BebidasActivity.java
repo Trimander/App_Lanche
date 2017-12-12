@@ -105,7 +105,7 @@ public class BebidasActivity extends AppCompatActivity {
         btnVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BebidasActivity.this, MainActivity.class);
+                Intent intent = new Intent(BebidasActivity.this, CardapioActivity.class);
                 startActivity(intent);
             }
         });

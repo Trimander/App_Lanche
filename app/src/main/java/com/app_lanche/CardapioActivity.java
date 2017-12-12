@@ -27,26 +27,25 @@ public class CardapioActivity extends AppCompatActivity {
 
         ListView lst = (ListView) findViewById(R.id.lvtLanches);
 
-        List<Lanche> samples = new ArrayList<>(10);
-        samples.add(new Lanche(R.drawable.lanche, R.drawable.add, "X - IMPERIO", "R$ 17,00", "", BebidasActivity.class));
-        samples.add(new Lanche(R.drawable.lanche, R.drawable.add, "X - TUDO", "R$ 17,00", "", null));
-        samples.add(new Lanche(R.drawable.lanche, R.drawable.add, "X - BACON", "R$ 17,00", "", null));
-        samples.add(new Lanche(R.drawable.lanche, R.drawable.add, "X - EGG BACON", "R$ 17,00", "", null));
-        samples.add(new Lanche(R.drawable.lanche, R.drawable.add, "MISTO", "R$ 17,00", "", null));
-        samples.add(new Lanche(R.drawable.lanche, R.drawable.add, "X - SALADA", "R$ 17,00", "", null));
-        samples.add(new Lanche(R.drawable.lanche, R.drawable.add, "X - BURGUER", "R$ 17,00", "", null));
+        List<Lanche> samples = new ArrayList<>(7);
+        samples.add(new Lanche(R.drawable.lanche, R.drawable.add, "X - IMPERIO", "17.00", "Pão, maionese, hambúrguer, presunto, mussarela, bacon, ovo, frango, calabresa, lombo, tomate, alface, catupity, milho e ervilha.", AdicionarLancheActivity.class));
+        samples.add(new Lanche(R.drawable.lanche, R.drawable.add, "X - TUDO", "12.00", "Pão, maionese, hambúrguer, presunto, mussarela, bacon, ovo, tomate, frango, milho e ervilha.", AdicionarLancheActivity.class));
+        samples.add(new Lanche(R.drawable.lanche, R.drawable.add, "X - BACON", "9.00", "Pão, maionese, harmbúrguer, presunto, mussarela, bacon, milho e ervilha.", AdicionarLancheActivity.class));
+        samples.add(new Lanche(R.drawable.lanche, R.drawable.add, "X - EGG BACON", "10.00", "Pão, maionese, hambúrguer, presunto, mussarela, bacon, ovo, milho e ervilha.", AdicionarLancheActivity.class));
+        samples.add(new Lanche(R.drawable.lanche, R.drawable.add, "X - CALABRESA", "6.00", "Pão, maionese, hambúrguer, presunto, mussarela, calabresa, tomate, alface, milho e ervilha.", AdicionarLancheActivity.class));
+        samples.add(new Lanche(R.drawable.lanche, R.drawable.add, "X - SALADA", "8.00", "Pão, maionese, hambúrguer, mussarela, tomate, alface, milho e ervilha.", AdicionarLancheActivity.class));
+        samples.add(new Lanche(R.drawable.lanche, R.drawable.add, "X - BURGUER", "5.00", "Pão, maionese, hambúrguer, presunto, mussarela, milho e ervilha.", AdicionarLancheActivity.class));
 
         LancheAdapter adapter = new LancheAdapter(samples, this);
         lst.setAdapter(adapter);
 
-//        lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Intent myIntent = new Intent(CardapioActivity.this, AdicionarLancheActivity.class);
-//                //myIntent.putExtra("test", "hello");
-//                startActivity(myIntent);
-//            }
-//        });
+        lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent myIntent = new Intent(CardapioActivity.this, AdicionarLancheActivity.class);
+                startActivity(myIntent);
+            }
+        });
 
     }
 

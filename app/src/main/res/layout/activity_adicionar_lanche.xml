@@ -9,7 +9,8 @@
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/appBarLayout5">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -22,7 +23,218 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBarLayout5"
+        android:background="@color/Fundo">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/RL2"
+            android:layout_margin="10dp"
+            android:background="@color/colorAccent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/lanche"
+                android:layout_marginStart="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/tvNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome"
+                android:textSize="20dp"
+                android:layout_marginStart="18dp"
+                android:layout_alignBaseline="@+id/tvRS2"
+                android:layout_alignBottom="@+id/tvRS2"
+                android:layout_toEndOf="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/tvPrecoL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0"
+                android:textSize="20dp"
+                android:layout_alignBaseline="@+id/tvRS2"
+                android:layout_alignBottom="@+id/tvRS2"
+                android:layout_toEndOf="@+id/tvRS2"
+                android:layout_marginStart="9dp" />
+
+            <TextView
+                android:id="@+id/tvRS2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ "
+                android:textSize="20dp"
+                android:layout_marginStart="47dp"
+                android:layout_above="@+id/tvDescricao"
+                android:layout_toEndOf="@+id/tvNome"
+                android:layout_marginBottom="13dp" />
+
+            <TextView
+                android:id="@+id/tvDescricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:text="Descrição"
+                android:layout_below="@+id/imageView"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:gravity="center"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvAdicionais"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RL2"
+            android:layout_weight="1"
+            android:text="Adicionais"
+            android:textSize="25dp"
+            android:layout_marginLeft="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:layout_below="@+id/tvAdicionais"
+            android:layout_margin="10dp"
+            android:background="@color/colorAccent"
+            android:id="@+id/LL4">
+
+            <CheckBox
+                android:id="@+id/cbBacon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Bacon"
+                android:button="@drawable/custom_checkbox"
+                android:layout_marginLeft="5dp"
+                android:paddingLeft="5dp"/>
+
+            <CheckBox
+                android:id="@+id/cbCebola"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cebola"
+                android:button="@drawable/custom_checkbox"
+                android:layout_marginLeft="5dp"
+                android:paddingLeft="5dp"/>
+
+            <CheckBox
+                android:id="@+id/cbOvo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ovo"
+                android:button="@drawable/custom_checkbox"
+                android:layout_marginLeft="5dp"
+                android:paddingLeft="5dp"/>
+
+            <CheckBox
+                android:id="@+id/cbFrango"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Frango"
+                android:button="@drawable/custom_checkbox"
+                android:layout_marginLeft="5dp"
+                android:paddingLeft="5dp"/>
+
+            <CheckBox
+                android:id="@+id/cbHamburguer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hamburguer"
+                android:button="@drawable/custom_checkbox"
+                android:layout_marginLeft="5dp"
+                android:paddingLeft="5dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvQuantidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantidade: "
+            android:textSize="25dp"
+            android:layout_above="@+id/btnVoltar"
+            android:layout_toStartOf="@+id/btnAdicionar"
+            android:layout_marginBottom="33dp" />
+
+        <EditText
+            android:id="@+id/etQuantidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="3"
+            android:inputType="number"
+            android:background="@color/colorAccent"
+            android:layout_alignBottom="@+id/tvQuantidade"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/tvQuantidade"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvRS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ "
+            android:textSize="25dp"
+            android:layout_marginEnd="14dp"
+            android:layout_alignTop="@+id/etQuantidade"
+            android:layout_toStartOf="@+id/tvPreco" />
+
+        <TextView
+            android:id="@+id/tvPreco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textSize="25dp"
+            android:layout_marginEnd="11dp"
+            android:layout_alignBaseline="@+id/tvRS"
+            android:layout_alignBottom="@+id/tvRS"
+            android:layout_alignEnd="@+id/LL4" />
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voltar"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/btnAdicionar"
+            android:background="#fe374a"
+            android:textColor="@color/colorAccent"/>
+
+        <Button
+            android:id="@+id/btnAdicionar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:background="#fff054"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorAccent"/>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/btnAdicionar"
+            android:background="#93c128"
+            android:text="Próximo"
+            android:textColor="@color/colorAccent" />
 
     </RelativeLayout>
 

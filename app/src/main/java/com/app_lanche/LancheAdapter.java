@@ -54,13 +54,13 @@ public class LancheAdapter extends BaseAdapter{
 
         final Lanche sample = list.get(position);
 
-        ImageView icon = (ImageView)v.findViewById(R.id.imgSample);
+        final ImageView icon = (ImageView)v.findViewById(R.id.imgSample);
         icon.setImageResource(sample.getImageLanche());
 
-        TextView title = (TextView)v.findViewById(R.id.txtTitleItem);
+        final TextView title = (TextView)v.findViewById(R.id.txtTitleItem);
         title.setText(sample.getNomeLanche());
 
-        TextView valor = (TextView)v.findViewById(R.id.txtValorItem);
+        final TextView valor = (TextView)v.findViewById(R.id.txtValorItem);
         valor.setText(sample.getValor());
 
 //        ImageView imgAdd = (ImageView)v.findViewById(R.id.imgAdd);
@@ -72,7 +72,11 @@ public class LancheAdapter extends BaseAdapter{
             public void onClick(View v) {
                 if(sample.getCls() != null){
                     Intent intent = new Intent(context, sample.getCls());
+                    intent.putExtra("nome", sample.getNomeLanche());
+                    intent.putExtra("valor", sample.getValor());
+                    intent.putExtra("desc", sample.getDescription());
                     context.startActivity(intent);
+
                 }
                 else{
                     Toast.makeText(context, "Sorry, we need to write this code", Toast.LENGTH_SHORT).show();

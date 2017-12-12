@@ -24,10 +24,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/Fundo"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/appBarLayout">
+        android:layout_below="@+id/appBarLayout"
+        android:background="@color/Fundo">
 
         <TextView
             android:id="@+id/tvBebidas"
