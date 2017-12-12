@@ -10,6 +10,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -25,7 +26,12 @@ public class AdicionarLancheActivity extends AppCompatActivity {
     private TextView tvPreco2;
     private TextView tvPreco;
     private TextView tvdescricao;
-    double total;
+    private CheckBox cbBacon;
+    private CheckBox cbCebola;
+    private CheckBox cbOvo;
+    private CheckBox cbFrango;
+    private CheckBox cbHamburguer;
+    double total, totalAdicional;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +51,7 @@ public class AdicionarLancheActivity extends AppCompatActivity {
         proximo();
         voltar();
         calculaTotal();
+        verificaCheckBox();
     }
 
     public void voltar(){
@@ -87,14 +94,90 @@ public class AdicionarLancheActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if(etQuantidade.length() == 0 || etQuantidade == null || etQuantidade.equals("")){
-                    tvPreco.setText(String.valueOf(0.00));
+                if(etQuantidade.length() <0 || etQuantidade == null || etQuantidade.equals("")){
+                    tvPreco.setText(String.valueOf(0.0));
                 }else{
-                    total = Integer.parseInt(etQuantidade.getText().toString()) * Double.parseDouble(tvPreco2.getText().toString());
+                    total = Integer.parseInt(etQuantidade.getText().toString()) * (Double.parseDouble(tvPreco2.getText().toString()) + totalAdicional);
                     tvPreco.setText(String.valueOf(total));
                 }
             }
         });
+
+    }
+
+    public void verificaCheckBox(){
+        cbBacon = (CheckBox)  findViewById(R.id.cbBacon);
+        cbCebola = (CheckBox)  findViewById(R.id.cbCebola);
+        cbOvo = (CheckBox)  findViewById(R.id.cbOvo);
+        cbFrango = (CheckBox)  findViewById(R.id.cbFrango);
+        cbHamburguer = (CheckBox)  findViewById(R.id.cbHamburguer);
+
+        cbBacon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(cbBacon.isChecked()){
+                    totalAdicional += 2.00;
+                    tvPreco.setText(String.valueOf(total + (totalAdicional * Integer.parseInt(etQuantidade.getText().toString()))));
+                }else{
+                    totalAdicional -= 2.00;
+                    tvPreco.setText(String.valueOf(total) + (totalAdicional * Integer.parseInt(etQuantidade.getText().toString())));
+                }
+            }
+        });
+
+        cbCebola.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(cbCebola.isChecked()){
+                    totalAdicional += 0.50;
+                    tvPreco.setText(String.valueOf(total + (totalAdicional * Integer.parseInt(etQuantidade.getText().toString()))));
+                }else{
+                    totalAdicional -= 0.50;
+                    tvPreco.setText(String.valueOf(total + (totalAdicional * Integer.parseInt(etQuantidade.getText().toString()))));
+                }
+            }
+        });
+
+        cbOvo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(cbOvo.isChecked()){
+                    totalAdicional += 1.00;
+                    tvPreco.setText(String.valueOf(total + (totalAdicional * Integer.parseInt(etQuantidade.getText().toString()))));
+                }else{
+                    totalAdicional -= 1.00;
+                    tvPreco.setText(String.valueOf(total + (totalAdicional * Integer.parseInt(etQuantidade.getText().toString()))));
+                }
+            }
+        });
+
+        cbFrango.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(cbFrango.isChecked()){
+                    totalAdicional += 1.50;
+                    tvPreco.setText(String.valueOf(total + (totalAdicional * Integer.parseInt(etQuantidade.getText().toString()))));
+                }else{
+                    totalAdicional -= 1.50;
+                    tvPreco.setText(String.valueOf(total + (totalAdicional * Integer.parseInt(etQuantidade.getText().toString()))));
+                }
+            }
+        });
+
+        cbHamburguer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(cbHamburguer.isChecked()){
+                    totalAdicional += 3.00;
+                    tvPreco.setText(String.valueOf(total + (totalAdicional * Integer.parseInt(etQuantidade.getText().toString()))));
+                }else{
+                    totalAdicional -= 3.00;
+                    tvPreco.setText(String.valueOf(total + (totalAdicional * Integer.parseInt(etQuantidade.getText().toString()))));
+                }
+            }
+        });
+
+
 
     }
 

@@ -79,7 +79,7 @@ public class LancheAdapter extends BaseAdapter{
 
                 }
                 else{
-                    Toast.makeText(context, "Sorry, we need to write this code", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Desculpe, não é possivel acessar.", Toast.LENGTH_SHORT).show();
                 }
             }
         });

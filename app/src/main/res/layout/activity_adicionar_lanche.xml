@@ -175,13 +175,14 @@
             android:id="@+id/etQuantidade"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="3"
-            android:inputType="number"
-            android:background="@color/colorAccent"
             android:layout_alignBottom="@+id/tvQuantidade"
-            android:layout_centerHorizontal="true"
             android:layout_alignTop="@+id/tvQuantidade"
-            android:gravity="center"/>
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorAccent"
+            android:ems="3"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="0" />
 
         <TextView
             android:id="@+id/tvRS"
