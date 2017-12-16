@@ -35,21 +35,45 @@
             android:layout_marginTop="10dp"
             android:textSize="25dp"/>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:orientation="vertical"
-            android:id="@+id/linearLayout2"
+            android:id="@+id/RL2"
             android:layout_below="@+id/tvConferirPedido"
             android:layout_alignParentStart="true"
             android:layout_marginTop="20dp"
             android:background="@drawable/border_radius">
 
             <TextView
-                android:id="@+id/tvPedido"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+                android:id="@+id/tvNomeLanche"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="iiiii"
+                android:layout_marginStart="35dp"
+                android:layout_alignBaseline="@+id/tvQuantidadeLanche"
+                android:layout_alignBottom="@+id/tvQuantidadeLanche"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/tvQuantidadeLanche"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8888"
+                android:layout_alignBaseline="@+id/tvPrecoLanche"
+                android:layout_alignBottom="@+id/tvPrecoLanche"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/tvPrecoLanche"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="iiiiii"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/tvQuantidadeLanche"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="19dp" />
+        </RelativeLayout>
 
         <TextView
             android:id="@+id/tvBebidas"
@@ -57,12 +81,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Bebidas"
-            android:layout_below="@+id/linearLayout2"
+            android:layout_below="@+id/RL2"
             android:layout_alignParentStart="true"
             android:layout_marginTop="10dp"
             android:textSize="25dp"/>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:orientation="vertical"
@@ -70,9 +94,48 @@
             android:layout_below="@+id/tvBebidas"
             android:layout_alignParentStart="true"
             android:background="@drawable/border_radius"
-            android:id="@+id/linearLayout3">
+            android:id="@+id/RL3">
 
-        </LinearLayout>
+            <TextView
+                android:id="@+id/tvNomeBebida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="59dp"
+                android:text="iiiii"
+                android:layout_alignBottom="@+id/tvQuantidadeBebida"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/tvQuantidadeBebida" />
+
+            <TextView
+                android:id="@+id/tvTamanhoBebida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8888"
+                android:layout_marginStart="57dp"
+                android:layout_alignBaseline="@+id/tvNomeBebida"
+                android:layout_alignBottom="@+id/tvNomeBebida"
+                android:layout_toEndOf="@+id/tvNomeBebida" />
+
+            <TextView
+                android:id="@+id/tvQuantidadeBebida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8888"
+                android:layout_marginTop="17dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignEnd="@+id/tvPrecoBebida"
+                android:layout_marginEnd="61dp" />
+
+            <TextView
+                android:id="@+id/tvPrecoBebida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="iiiiii"
+                android:layout_marginEnd="65dp"
+                android:layout_alignBaseline="@+id/tvQuantidadeBebida"
+                android:layout_alignBottom="@+id/tvQuantidadeBebida"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
 
         <TextView
             android:id="@+id/tvRS"
@@ -80,19 +143,20 @@
             android:layout_height="wrap_content"
             android:text="R$ "
             android:textSize="20dp"
-            android:layout_alignBaseline="@+id/tvPreco"
-            android:layout_alignBottom="@+id/tvPreco"
-            android:layout_toStartOf="@+id/tvPreco" />
+            android:layout_above="@+id/btnFinalizar"
+            android:layout_toStartOf="@+id/tvPreco3"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="51dp" />
 
         <TextView
-            android:id="@+id/tvPreco"
+            android:id="@+id/tvPreco3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0.0"
             android:textSize="20dp"
-            android:layout_below="@+id/linearLayout3"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"/>
+            android:layout_alignBaseline="@+id/tvRS"
+            android:layout_alignBottom="@+id/tvRS"
+            android:layout_centerHorizontal="true" />
 
         <Button
             android:id="@+id/btnVoltar"

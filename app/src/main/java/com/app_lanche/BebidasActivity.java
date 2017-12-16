@@ -2,8 +2,8 @@ package com.app_lanche;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.os.Environment;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
@@ -11,19 +11,23 @@ import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
-import java.util.List;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class BebidasActivity extends AppCompatActivity {
+
+    String baseDir = Environment.getExternalStorageDirectory().getAbsolutePath();
+    String fileName = "/Download/carrinho.csv";
+    String filePath = baseDir + fileName;
 
     private Spinner spinner1, spinner2;
     private Button btnNext;
@@ -34,6 +38,11 @@ public class BebidasActivity extends AppCompatActivity {
 
     private TextView tvPreco;
     double total;
+
+    String bebida;
+    String tamanho;
+    String quantidade;
+    String preco;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,17 +71,25 @@ public class BebidasActivity extends AppCompatActivity {
 
     public void adicionarCarrinho() {
         btnAdicionar.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
+                if(etQuantidade.length()== 0 || etQuantidade == null || etQuantidade.equals("")) {
+                    Toast.makeText(BebidasActivity.this, "Digite a quantidade!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                else {
+                    bebida = spinner2.getSelectedItem().toString();
+                    tamanho = spinner1.getSelectedItem().toString();
+                    quantidade = String.valueOf(etQuantidade.getText());
+                    preco = String.valueOf(String.valueOf(total));
 
-                Toast.makeText(BebidasActivity.this,
-                        "Itens selecionados : " +
-                                "\nTamanho : " + String.valueOf(spinner1.getSelectedItem()) +
-                                "\nBebida : " + String.valueOf(spinner2.getSelectedItem()) +
-                                "\nQuantidade : " + String.valueOf(etQuantidade.getText())+
-                                "\nPreço : " + String.valueOf(String.valueOf(total)),
-                        Toast.LENGTH_SHORT).show();
+                    //String[] data = readCSV(filePath);
+                    String[] data2 = {"", bebida, tamanho, quantidade, preco};
+
+                    writeCSV(filePath, data2);
+                    Toast.makeText(BebidasActivity.this, "Adicionado ao carrinho", Toast.LENGTH_SHORT).show();
+
+                }
             }
 
         });
@@ -80,7 +97,7 @@ public class BebidasActivity extends AppCompatActivity {
 
     public void calculaTotal(){
         etQuantidade = (EditText) findViewById(R.id.etQuantidade);
-        tvPreco = (TextView) findViewById(R.id.tvPreco);
+        tvPreco = (TextView) findViewById(R.id.tvPreco3);
 
         etQuantidade.addTextChangedListener(new TextWatcher() {
             @Override
@@ -188,4 +205,44 @@ public class BebidasActivity extends AppCompatActivity {
         });
 
     }
+
+    @NonNull
+    private String[] readCSV(String filePath){
+        String data = "";
+        try{
+           FileInputStream fis = new FileInputStream(new File(filePath));
+
+            int temp;
+            while ((temp = fis.read()) != -1){
+                data += (char)temp;
+            }
+        }catch (FileNotFoundException e){
+            e.printStackTrace();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+        return data.split(",");
+    }
+
+    private void writeCSV(String filePath, String[] data){
+        String text = "";
+
+        for(int i = 0;i<data.length - 1;i++){
+            text += data[i] + ",";
+        }
+
+        text += data[data.length-1];
+
+        try{
+            FileOutputStream outputStream = new FileOutputStream(new File(filePath), true);
+            outputStream.write(text.getBytes());
+            outputStream.close();
+        }catch (FileNotFoundException e){
+            e.printStackTrace();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
 }

@@ -1,12 +1,8 @@
 package com.app_lanche;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
@@ -15,24 +11,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
-
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static android.R.attr.data;
-
 public class AdicionarLancheActivity extends AppCompatActivity {
-    String FileName = "Carrinho";
-
     private Button btnNext;
     private Button btnVoltar;
     private Button btnAdicionar;
@@ -56,10 +43,10 @@ public class AdicionarLancheActivity extends AppCompatActivity {
     ArrayList<String> list ;
 
     // Variaveis para escrever no arquivo
-        String quantidade;
-        String preco;
-        String adicionais;
-        String nome;
+    String quantidade;
+    String preco;
+    String adicionais;
+    String nome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,10 +63,9 @@ public class AdicionarLancheActivity extends AppCompatActivity {
         etQuantidade = (EditText) findViewById(R.id.etQuantidade);
         btnNext = (Button) findViewById(R.id.btnNext);
         btnVoltar = (Button) findViewById(R.id.btnVoltar);
-        tvPreco = (TextView) findViewById(R.id.tvPreco);
+        tvPreco = (TextView) findViewById(R.id.tvPreco3);
         btnAdicionar = (Button) findViewById(R.id.btnAdicionar);
         tvAdd = (TextView) findViewById(R.id.tvAdd);
-
 
         tvNome.setText(getIntent().getExtras().getString("nome"));
         tvPreco2.setText(getIntent().getExtras().getString("valor"));
@@ -106,11 +92,29 @@ public class AdicionarLancheActivity extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AdicionarLancheActivity.this, BebidasActivity.class);
-                startActivity(intent);
+                if(etQuantidade.length()== 0 || etQuantidade == null || etQuantidade.equals("")) {
+                    Intent intent = new Intent(AdicionarLancheActivity.this, BebidasActivity.class);
+                    startActivity(intent);
+                }
+                else{
+                    for (String str : list) {
+                        tvAdd.setText(tvAdd.getText().toString() + str + " ");
+                    }
+
+                    nome = tvNome.getText().toString();
+                    adicionais = tvAdd.getText().toString();
+                    quantidade = String.valueOf(etQuantidade.getText());
+                    preco = String.valueOf(String.valueOf(total));
+
+                    String[] data = {nome, adicionais, quantidade, preco};
+                    writeCSV(filePath, data);
+                    Toast.makeText(AdicionarLancheActivity.this,"Adicionado ao carrinho", Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(AdicionarLancheActivity.this, BebidasActivity.class);
+                    startActivity(intent);
+                }
             }
         });
-
     }
 
     public void calculaTotal(){
@@ -252,39 +256,29 @@ public class AdicionarLancheActivity extends AppCompatActivity {
         btnAdicionar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                for (String str : list) {
-                    tvAdd.setText(tvAdd.getText().toString() + str + " , ");
+                if(etQuantidade.length()== 0 || etQuantidade == null || etQuantidade.equals("")) {
+                    Toast.makeText(AdicionarLancheActivity.this, "Digite a quantidade!", Toast.LENGTH_SHORT).show();
+                    return;
                 }
+                else{
+                    for (String str : list) {
+                        tvAdd.setText(tvAdd.getText().toString() + str + " ");
+                    }
 
-                nome = tvNome.getText().toString();
-                adicionais = tvAdd.getText().toString();
-                quantidade = String.valueOf(etQuantidade.getText());
-                preco = String.valueOf(String.valueOf(total));
+                    nome = tvNome.getText().toString();
+                    adicionais = tvAdd.getText().toString();
+                    quantidade = String.valueOf(etQuantidade.getText());
+                    preco = String.valueOf(String.valueOf(total));
 
-                String[] data = {nome, adicionais, quantidade, preco};
-                writeCSV(filePath, data);
-                Toast.makeText(AdicionarLancheActivity.this, data[0] + "," + data[1]+ "," + data[2]+ "," + data[3], Toast.LENGTH_SHORT).show();
-//                try{
-//                    FileOutputStream fos = openFileOutput(FileName, Context.MODE_PRIVATE);
-//                    fos.write(nome.getBytes());
-//                    fos.write(adicionais.getBytes());
-//                    fos.write(quantidade.getBytes());
-//                    fos.write(preco.getBytes());
-//                    fos.close();
-//                    Toast.makeText(AdicionarLancheActivity.this, "Adicionado no Carrinho", Toast.LENGTH_SHORT).show();
-//
-//                }catch (java.io.IOException e){
-//                    e.printStackTrace();
-//                }
-//
-//                Toast.makeText(AdicionarLancheActivity.this,
-//                        "Itens selecionados : " + tvAdd.getText()+
-//                                "\nQuantidade : " + String.valueOf(etQuantidade.getText())+
-//                                "\nPreço : " + String.valueOf(String.valueOf(total)),
-//                        Toast.LENGTH_SHORT).show();
-            }
+                    String[] data = {nome, adicionais, quantidade, preco};
+                    writeCSV(filePath, data);
+                    Toast.makeText(AdicionarLancheActivity.this, "Adicionado ao carrinho", Toast.LENGTH_SHORT).show();
 
+                    Intent intent = new Intent(AdicionarLancheActivity.this, CardapioActivity.class);
+                    startActivity(intent);
+
+                    }
+                }
         });
     }
 
@@ -306,24 +300,5 @@ public class AdicionarLancheActivity extends AppCompatActivity {
         }catch (IOException e){
             e.printStackTrace();
         }
-    }
-
-    @NonNull
-    private String[] readCSV(String filePath){
-        String data = "";
-        try{
-            FileInputStream fis = new FileInputStream(new File(filePath));
-
-            int temp;
-            while ((temp = fis.read()) != -1){
-                data += (char)temp;
-            }
-        }catch (FileNotFoundException e){
-            e.printStackTrace();
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-
-        return data.split(",");
     }
 }

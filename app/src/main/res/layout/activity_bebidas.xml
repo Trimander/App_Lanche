@@ -123,7 +123,7 @@
             android:layout_marginBottom="52dp" />
 
         <TextView
-            android:id="@+id/tvPreco"
+            android:id="@+id/tvPreco3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/tvRS"

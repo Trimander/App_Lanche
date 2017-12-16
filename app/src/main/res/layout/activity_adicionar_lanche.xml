@@ -194,10 +194,10 @@
             android:textSize="25dp"
             android:layout_marginEnd="14dp"
             android:layout_alignTop="@+id/etQuantidade"
-            android:layout_toStartOf="@+id/tvPreco" />
+            android:layout_toStartOf="@+id/tvPreco3" />
 
         <TextView
-            android:id="@+id/tvPreco"
+            android:id="@+id/tvPreco3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0.0"
