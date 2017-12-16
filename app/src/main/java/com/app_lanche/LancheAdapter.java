@@ -2,6 +2,7 @@ package com.app_lanche;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,8 +64,8 @@ public class LancheAdapter extends BaseAdapter{
         final TextView valor = (TextView)v.findViewById(R.id.txtValorItem);
         valor.setText(sample.getValor());
 
-//        ImageView imgAdd = (ImageView)v.findViewById(R.id.imgAdd);
-//        imgAdd.setImageResource(sample.getImageAdd());
+       //  Bundle bundle = new Bundle();
+      //  bundle.putStringArray();
 
         ImageButton btnGo = (ImageButton)v.findViewById(R.id.btnAdd);
         btnGo.setOnClickListener(new View.OnClickListener() {

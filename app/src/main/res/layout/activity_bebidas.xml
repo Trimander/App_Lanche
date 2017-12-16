@@ -40,21 +40,6 @@
             android:textSize="30dp"/>
 
         <Spinner
-            android:id="@+id/spinner1"
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:layout_marginTop="80dp"
-            android:entries="@array/itensTamnho"
-            android:prompt="@string/tamanho"
-            android:layout_below="@+id/tvBebidas"
-            android:layout_alignParentStart="true"
-            android:background="@color/colorAccent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:scrollIndicators="right"
-            />
-
-        <Spinner
             android:id="@+id/spinner2"
             android:layout_width="match_parent"
             android:layout_height="25dp"
@@ -62,11 +47,45 @@
             android:prompt="@string/bebida"
             android:background="@color/colorAccent"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginRight="150dp"
             android:scrollIndicators="right"
-            android:layout_below="@+id/spinner1"
-            android:layout_marginTop="39dp"
-            android:layout_alignParentStart="true" />
+            android:layout_above="@+id/spinner1"
+            android:layout_marginBottom="57dp" />
+
+        <TextView
+            android:id="@+id/tvRS1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RS"
+            android:textSize="20dp"
+            android:layout_alignBottom="@+id/spinner2"
+            android:layout_alignEnd="@+id/etQuantidade"
+            android:layout_marginEnd="11dp" />
+
+        <TextView
+            android:id="@+id/tvPrecoBebida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="0.0"
+            android:layout_alignBaseline="@+id/tvRS1"
+            android:layout_alignBottom="@+id/tvRS1"
+            android:layout_toEndOf="@+id/tvRS1" />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:entries="@array/itensTamnho"
+            android:prompt="@string/tamanho"
+            android:background="@color/colorAccent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="150dp"
+            android:scrollIndicators="right"
+            android:layout_above="@+id/tvQuantidade"
+            android:layout_marginBottom="76dp" />
+
+
 
         <TextView
             android:id="@+id/tvQuantidade"
@@ -74,9 +93,10 @@
             android:layout_height="wrap_content"
             android:text="Quantidade"
             android:textSize="25dp"
-            android:layout_below="@+id/spinner2"
-            android:layout_toEndOf="@+id/btnVoltar"
-            android:layout_marginTop="54dp" />
+            android:layout_marginBottom="108dp"
+            android:layout_above="@+id/tvRS"
+            android:layout_toStartOf="@+id/etQuantidade"
+            android:layout_marginEnd="11dp" />
 
         <EditText
             android:id="@+id/etQuantidade"
@@ -120,7 +140,7 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:layout_toEndOf="@+id/btnAdicionar"
-            android:background="#93c128"
+            android:background="@color/Botao"
             android:textColor="@color/colorAccent"/>
 
         <Button
@@ -128,10 +148,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="+"
+            android:textSize="40dp"
             android:layout_alignParentBottom="true"
-            android:layout_toEndOf="@+id/btnVoltar"
-            android:background="#fff054"
-            android:textColor="@color/colorAccent"/>
+            android:background="#FFD700"
+            android:textColor="@color/colorAccent"
+            android:layout_alignEnd="@+id/tvQuantidade"
+            android:layout_toEndOf="@+id/btnVoltar" />
 
         <Button
             android:id="@+id/btnVoltar"
@@ -141,7 +163,8 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
             android:background="#fe374a"
-            android:textColor="@color/colorAccent"/>
+            android:textColor="@color/colorAccent"
+            android:layout_toStartOf="@+id/tvRS" />
     </RelativeLayout>
 
 </RelativeLayout>

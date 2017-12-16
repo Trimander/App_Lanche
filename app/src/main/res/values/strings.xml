@@ -14,7 +14,7 @@
         <item>Guaraná</item>
         <item>Coca-Cola</item>
         <item>Fanta</item>
-        <item>Nenhum</item>
+        <item>Suco</item>
     </string-array>
     <string name="title_activity_cardapio">Cardápio</string>
     <string name="title_activity_bebidas">Bebidas</string>
@@ -22,5 +22,6 @@
     <string name="title_activity_carrinho">Carrinho</string>
     <string name="title_activity_status">Status</string>
     <string name="title_activity_adicionar_lanche">Adicionar Lanche</string>
+    <string name="title_activity_teste">Teste</string>
 
 </resources>

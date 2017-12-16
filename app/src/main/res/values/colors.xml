@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryDark">#00953d</color>
     <color name="colorAccent">#FFFFFF</color>
     <color name="Barra">#00953d</color>
     <color name="Fundo">#EBE18C</color>
-    <color name="Botao">#93C128</color>
+    <color name="Botao">#00953d</color>
 </resources>

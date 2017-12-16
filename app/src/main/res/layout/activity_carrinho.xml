@@ -45,6 +45,10 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/border_radius">
 
+            <TextView
+                android:id="@+id/tvPedido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
         </LinearLayout>
 
         <TextView
@@ -107,7 +111,7 @@
             android:text="Finalizar"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
-            android:background="#93c128"
+            android:background="@color/Botao"
             android:textColor="@color/colorAccent"
             android:layout_toEndOf="@+id/tvBebidas" />
 

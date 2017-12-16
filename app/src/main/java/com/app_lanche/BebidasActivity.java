@@ -10,12 +10,15 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +30,7 @@ public class BebidasActivity extends AppCompatActivity {
     private Button btnVoltar;
     private Button btnAdicionar;
     private EditText etQuantidade;
+    private TextView tvPrecoBebidas;
 
     private TextView tvPreco;
     double total;
@@ -38,8 +42,15 @@ public class BebidasActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        addListenerOnButton();
+        spinner1 = (Spinner) findViewById(R.id.spinner1);
+        spinner2 = (Spinner) findViewById(R.id.spinner2);
+        etQuantidade = (EditText) findViewById(R.id.etQuantidade);
+        btnAdicionar = (Button) findViewById(R.id.btnAdicionar);
+        tvPrecoBebidas = (TextView) findViewById(R.id.tvPrecoBebida);
+
+        adicionarCarrinho();
         calculaTotal();
+        calculaPreco();
         voltar();
         proximo();
     }
@@ -49,13 +60,7 @@ public class BebidasActivity extends AppCompatActivity {
         return true;
     }
 
-    public void addListenerOnButton() {
-
-        spinner1 = (Spinner) findViewById(R.id.spinner1);
-        spinner2 = (Spinner) findViewById(R.id.spinner2);
-        etQuantidade = (EditText) findViewById(R.id.etQuantidade);
-        btnAdicionar = (Button) findViewById(R.id.btnAdicionar);
-
+    public void adicionarCarrinho() {
         btnAdicionar.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -89,14 +94,74 @@ public class BebidasActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
                 if(etQuantidade.length() == 0 || etQuantidade == null || etQuantidade.equals("")){
-                    tvPreco.setText(String.valueOf(0.00));
+                    total = 0;
+                    tvPreco.setText(String.valueOf(total));
                 }else{
-                    total = Integer.parseInt(etQuantidade.getText().toString()) * 3;
+                    total = Integer.parseInt(etQuantidade.getText().toString()) *Double.parseDouble(tvPrecoBebidas.getText().toString()) ;
                     tvPreco.setText(String.valueOf(total));
                 }
             }
         });
 
+    }
+
+    public void calculaPreco(){
+        spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedItemText = (String) parent.getItemAtPosition(position);
+
+                if(selectedItemText.equals("2 Litros")){
+                    if(etQuantidade.length()== 0 || etQuantidade == null || etQuantidade.equals("")){
+                        total = 0;
+                        tvPrecoBebidas.setText("8.00");
+                        tvPreco.setText(String.valueOf(total));
+                    }else{
+                        tvPrecoBebidas.setText("8.00");
+                        total = Integer.parseInt(etQuantidade.getText().toString()) *Double.parseDouble(tvPrecoBebidas.getText().toString()) ;
+                        tvPreco.setText(String.valueOf(total));
+                    }
+                }
+                if(selectedItemText.equals("1,5 Litros")){
+                    if(etQuantidade.length()== 0 || etQuantidade == null || etQuantidade.equals("")){
+                        total = 0;
+                        tvPrecoBebidas.setText("6.00");
+                        tvPreco.setText(String.valueOf(total));
+                    }else{
+                        tvPrecoBebidas.setText("6.00");
+                        total = Integer.parseInt(etQuantidade.getText().toString()) *Double.parseDouble(tvPrecoBebidas.getText().toString()) ;
+                        tvPreco.setText(String.valueOf(total));
+                    }
+                }
+                if(selectedItemText.equals("600 ml")){
+                    if(etQuantidade.length()== 0 || etQuantidade == null || etQuantidade.equals("")){
+                        total = 0;
+                        tvPrecoBebidas.setText("4.00");
+                        tvPreco.setText(String.valueOf(total));
+                    }else{
+                        tvPrecoBebidas.setText("4.00");
+                        total = Integer.parseInt(etQuantidade.getText().toString()) *Double.parseDouble(tvPrecoBebidas.getText().toString()) ;
+                        tvPreco.setText(String.valueOf(total));
+                    }
+                }
+                if(selectedItemText.equals("Lata")){
+                    if(etQuantidade.length()== 0 || etQuantidade == null || etQuantidade.equals("")){
+                        total = 0;
+                        tvPrecoBebidas.setText("3.50");
+                        tvPreco.setText(String.valueOf(total));
+                    }else{
+                        tvPrecoBebidas.setText("3.50");
+                        total = Integer.parseInt(etQuantidade.getText().toString()) *Double.parseDouble(tvPrecoBebidas.getText().toString()) ;
+                        tvPreco.setText(String.valueOf(total));
+                    }
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
     public void voltar(){
