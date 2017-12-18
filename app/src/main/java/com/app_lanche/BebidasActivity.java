@@ -63,11 +63,6 @@ public class BebidasActivity extends AppCompatActivity {
         voltar();
         proximo();
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
 
     public void adicionarCarrinho() {
         btnAdicionar.setOnClickListener(new View.OnClickListener() {
@@ -75,7 +70,6 @@ public class BebidasActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(etQuantidade.length()== 0 || etQuantidade == null || etQuantidade.equals("")) {
                     Toast.makeText(BebidasActivity.this, "Digite a quantidade!", Toast.LENGTH_SHORT).show();
-                    return;
                 }
                 else {
                     bebida = spinner2.getSelectedItem().toString();
@@ -202,23 +196,11 @@ public class BebidasActivity extends AppCompatActivity {
                     String[] data2 = {"", "", "", "", ""," "};
 
                     writeCSV(filePath, data2);
-                    Toast.makeText(BebidasActivity.this, "Entrou no if", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(BebidasActivity.this, PagamentoActivity.class);
                     startActivity(intent);
-                }
-                else {
-                    bebida = spinner2.getSelectedItem().toString();
-                    tamanho = spinner1.getSelectedItem().toString();
-                    quantidade = String.valueOf(etQuantidade.getText());
-                    preco = String.valueOf(String.valueOf(total));
-
-                    String[] data2 = {"", bebida, tamanho, quantidade, preco};
-
-                    writeCSV(filePath, data2);
-                    Toast.makeText(BebidasActivity.this, "Adicionado ao carrinho", Toast.LENGTH_SHORT).show();
+                }else{
                     Intent intent = new Intent(BebidasActivity.this, PagamentoActivity.class);
                     startActivity(intent);
-
                 }
 
             }

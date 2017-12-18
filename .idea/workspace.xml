@@ -20,15 +20,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/app_lanche/AdicionarLancheActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/app_lanche/AdicionarLancheActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/app_lanche/BebidasActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/app_lanche/BebidasActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/app_lanche/CardapioActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/app_lanche/CardapioActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/app_lanche/CarrinhoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/app_lanche/CarrinhoActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/app_lanche/LancheAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/app_lanche/LancheAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/app_lanche/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/app_lanche/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_carrinho.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_carrinho.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_status.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_status.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/app_lanche/PagamentoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/app_lanche/PagamentoActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
     </list>
     <ignored path="App_Lanche.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,68 +60,35 @@
       <file leaf-file-name="AdicionarLancheActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/AdicionarLancheActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="295" column="45" selection-start-line="295" selection-start-column="45" selection-end-line="295" selection-end-column="45" />
+            <state relative-caret-position="770">
+              <caret line="292" column="57" selection-start-line="292" selection-start-column="57" selection-end-line="292" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#voltar#0;class#AdicionarLancheActivity#0" expanded="false" />
+                <element signature="method#proximo#0;class#AdicionarLancheActivity#0" expanded="false" />
                 <element signature="e#3024#4382#0" expanded="true" />
                 <element signature="e#4381#4382#0" expanded="true" />
                 <element signature="method#calculaTotal#0;class#AdicionarLancheActivity#0" expanded="false" />
                 <element signature="method#verificaCheckBox#0;class#AdicionarLancheActivity#0" expanded="false" />
                 <element signature="method#adicionarCarrinho#0;class#AdicionarLancheActivity#0" expanded="false" />
+                <element signature="method#writeCSV#0;class#AdicionarLancheActivity#0" expanded="false" />
+                <element signature="method#readCSV#0;class#AdicionarLancheActivity#0" expanded="false" />
+                <element signature="method#temCSV#0;class#AdicionarLancheActivity#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CardapioActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/CardapioActivity.java">
+      <file leaf-file-name="StatusActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/StatusActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-85">
-              <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+            <state relative-caret-position="170">
+              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
               <folding>
-                <element signature="e#2579#2900#0" expanded="true" />
-                <element signature="e#2899#2900#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-              <folding>
-                <element signature="e#786#1068#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LancheAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/LancheAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
-              <folding>
-                <element signature="e#2078#2736#0" expanded="true" />
-                <element signature="e#2735#2736#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CarrinhoActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/CarrinhoActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="126" column="31" selection-start-line="126" selection-start-column="24" selection-end-line="126" selection-end-column="31" />
-              <folding>
-                <element signature="method#voltar#0;class#CarrinhoActivity#0" expanded="false" />
-                <element signature="method#finalizar#0;class#CarrinhoActivity#0" expanded="false" />
-                <element signature="method#readCSV#0;class#CarrinhoActivity#0" expanded="false" />
+                <element signature="method#onCreate#0;class#StatusActivity#0" expanded="false" />
+                <element signature="method#inicio#0;class#StatusActivity#0" expanded="false" />
+                <element signature="e#839#1079#0" expanded="true" />
+                <element signature="e#1078#1079#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,15 +97,81 @@
       <file leaf-file-name="BebidasActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/BebidasActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="206" column="42" selection-start-line="206" selection-start-column="42" selection-end-line="206" selection-end-column="42" />
+            <state relative-caret-position="229">
+              <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
               <folding>
-                <element signature="method#onCreateOptionsMenu#0;class#BebidasActivity#0" expanded="false" />
+                <element signature="method#adicionarCarrinho#0;class#BebidasActivity#0" expanded="false" />
                 <element signature="method#calculaTotal#0;class#BebidasActivity#0" expanded="false" />
                 <element signature="method#calculaPreco#0;class#BebidasActivity#0" expanded="false" />
                 <element signature="method#voltar#0;class#BebidasActivity#0" expanded="false" />
+                <element signature="method#proximo#0;class#BebidasActivity#0" expanded="false" />
                 <element signature="method#readCSV#0;class#BebidasActivity#0" expanded="false" />
+                <element signature="method#writeCSV#0;class#BebidasActivity#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CarrinhoActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/CarrinhoActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="770">
+              <caret line="125" column="40" selection-start-line="125" selection-start-column="40" selection-end-line="125" selection-end-column="40" />
+              <folding>
+                <element signature="method#voltar#0;class#CarrinhoActivity#0" expanded="false" />
+                <element signature="method#finalizar#0;class#CarrinhoActivity#0" expanded="false" />
+                <element signature="method#readCSV#0;class#CarrinhoActivity#0" expanded="false" />
+                <element signature="method#calculaTotal#0;class#CarrinhoActivity#0" expanded="false" />
+                <element signature="method#carregarCarrinhoLanche#0;class#CarrinhoActivity#0" expanded="false" />
+                <element signature="method#carregarCarrinhoBebida#0;class#CarrinhoActivity#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CardapioActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/CardapioActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+              <folding>
+                <element signature="e#786#1068#0" expanded="true" />
+                <element signature="e#1067#1068#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LancheAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/LancheAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+              <folding>
+                <element signature="method#LancheAdapter#0;class#LancheAdapter#0" expanded="false" />
+                <element signature="e#2001#2659#0" expanded="true" />
+                <element signature="e#2658#2659#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lanche.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/Lanche.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -2036,7 +2066,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/app_lanche/Lanche.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_cardapio.xml" />
@@ -2054,16 +2083,17 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_pagamento.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_bebidas.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/app_lanche/PagamentoActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_carrinho.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_status.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/app_lanche/LancheAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/app_lanche/AdicionarLancheActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/app_lanche/CarrinhoActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/app_lanche/CardapioActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app_lanche/PagamentoActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/app_lanche/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app_lanche/CardapioActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/app_lanche/LancheAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/app_lanche/BebidasActivity.java" />
       </list>
     </option>
@@ -2139,6 +2169,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App_Lanche" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2539,7 +2587,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2549,6 +2597,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2569,7 +2618,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2622,11 +2670,15 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#voltar#0;class#AdicionarLancheActivity#0" expanded="false" />
+            <element signature="method#proximo#0;class#AdicionarLancheActivity#0" expanded="false" />
             <element signature="e#3024#4382#0" expanded="true" />
             <element signature="e#4381#4382#0" expanded="true" />
             <element signature="method#calculaTotal#0;class#AdicionarLancheActivity#0" expanded="false" />
             <element signature="method#verificaCheckBox#0;class#AdicionarLancheActivity#0" expanded="false" />
             <element signature="method#adicionarCarrinho#0;class#AdicionarLancheActivity#0" expanded="false" />
+            <element signature="method#writeCSV#0;class#AdicionarLancheActivity#0" expanded="false" />
+            <element signature="method#readCSV#0;class#AdicionarLancheActivity#0" expanded="false" />
+            <element signature="method#temCSV#0;class#AdicionarLancheActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2712,43 +2764,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/border_button.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/select_button.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/PagamentoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="70" column="43" selection-start-line="70" selection-start-column="43" selection-end-line="70" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1939#1940#0" expanded="false" />
-            <element signature="e#1999#2000#0" expanded="false" />
-            <element signature="e#2142#2143#0" expanded="false" />
-            <element signature="e#2200#2201#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/StatusActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -2783,17 +2803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_pagamento.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2893,84 +2902,147 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_pagamento.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/PagamentoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+          <folding>
+            <element signature="method#voltar#0;class#PagamentoActivity#0" expanded="false" />
+            <element signature="method#proximo#0;class#PagamentoActivity#0" expanded="false" />
+            <element signature="e#2252#3248#0" expanded="true" />
+            <element signature="e#3247#3248#0" expanded="true" />
+            <element signature="method#escolhaPagamento#0;class#PagamentoActivity#0" expanded="false" />
+            <element signature="e#3332#3673#0" expanded="true" />
+            <element signature="e#3672#3673#0" expanded="true" />
+            <element signature="e#3715#4057#0" expanded="true" />
+            <element signature="e#4056#4057#0" expanded="true" />
+            <element signature="method#writeCSV#0;class#PagamentoActivity#0" expanded="false" />
+            <marker date="1513629597173" expanded="false" signature="4127:4551" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/StatusActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          <folding>
+            <element signature="method#onCreate#0;class#StatusActivity#0" expanded="false" />
+            <element signature="method#inicio#0;class#StatusActivity#0" expanded="false" />
+            <element signature="e#839#1079#0" expanded="true" />
+            <element signature="e#1078#1079#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/Lanche.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-250">
+        <state relative-caret-position="17">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/LancheAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/CarrinhoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+        <state relative-caret-position="770">
+          <caret line="125" column="40" selection-start-line="125" selection-start-column="40" selection-end-line="125" selection-end-column="40" />
           <folding>
-            <element signature="e#2078#2736#0" expanded="true" />
-            <element signature="e#2735#2736#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-          <folding>
-            <element signature="e#786#1068#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/AdicionarLancheActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="295" column="45" selection-start-line="295" selection-start-column="45" selection-end-line="295" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#voltar#0;class#AdicionarLancheActivity#0" expanded="false" />
-            <element signature="e#3024#4382#0" expanded="true" />
-            <element signature="e#4381#4382#0" expanded="true" />
-            <element signature="method#calculaTotal#0;class#AdicionarLancheActivity#0" expanded="false" />
-            <element signature="method#verificaCheckBox#0;class#AdicionarLancheActivity#0" expanded="false" />
-            <element signature="method#adicionarCarrinho#0;class#AdicionarLancheActivity#0" expanded="false" />
+            <element signature="method#voltar#0;class#CarrinhoActivity#0" expanded="false" />
+            <element signature="method#finalizar#0;class#CarrinhoActivity#0" expanded="false" />
+            <element signature="method#readCSV#0;class#CarrinhoActivity#0" expanded="false" />
+            <element signature="method#calculaTotal#0;class#CarrinhoActivity#0" expanded="false" />
+            <element signature="method#carregarCarrinhoLanche#0;class#CarrinhoActivity#0" expanded="false" />
+            <element signature="method#carregarCarrinhoBebida#0;class#CarrinhoActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/CardapioActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+        <state relative-caret-position="510">
+          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
           <folding>
-            <element signature="e#2579#2900#0" expanded="true" />
-            <element signature="e#2899#2900#0" expanded="true" />
+            <element signature="e#786#1068#0" expanded="true" />
+            <element signature="e#1067#1068#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/CarrinhoActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/LancheAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="126" column="31" selection-start-line="126" selection-start-column="24" selection-end-line="126" selection-end-column="31" />
+        <state relative-caret-position="277">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
-            <element signature="method#voltar#0;class#CarrinhoActivity#0" expanded="false" />
-            <element signature="method#finalizar#0;class#CarrinhoActivity#0" expanded="false" />
-            <element signature="method#readCSV#0;class#CarrinhoActivity#0" expanded="false" />
+            <element signature="method#LancheAdapter#0;class#LancheAdapter#0" expanded="false" />
+            <element signature="e#2001#2659#0" expanded="true" />
+            <element signature="e#2658#2659#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/AdicionarLancheActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="292" column="57" selection-start-line="292" selection-start-column="57" selection-end-line="292" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#voltar#0;class#AdicionarLancheActivity#0" expanded="false" />
+            <element signature="method#proximo#0;class#AdicionarLancheActivity#0" expanded="false" />
+            <element signature="e#3024#4382#0" expanded="true" />
+            <element signature="e#4381#4382#0" expanded="true" />
+            <element signature="method#calculaTotal#0;class#AdicionarLancheActivity#0" expanded="false" />
+            <element signature="method#verificaCheckBox#0;class#AdicionarLancheActivity#0" expanded="false" />
+            <element signature="method#adicionarCarrinho#0;class#AdicionarLancheActivity#0" expanded="false" />
+            <element signature="method#writeCSV#0;class#AdicionarLancheActivity#0" expanded="false" />
+            <element signature="method#readCSV#0;class#AdicionarLancheActivity#0" expanded="false" />
+            <element signature="method#temCSV#0;class#AdicionarLancheActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app_lanche/BebidasActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="206" column="42" selection-start-line="206" selection-start-column="42" selection-end-line="206" selection-end-column="42" />
+        <state relative-caret-position="229">
+          <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
           <folding>
-            <element signature="method#onCreateOptionsMenu#0;class#BebidasActivity#0" expanded="false" />
+            <element signature="method#adicionarCarrinho#0;class#BebidasActivity#0" expanded="false" />
             <element signature="method#calculaTotal#0;class#BebidasActivity#0" expanded="false" />
             <element signature="method#calculaPreco#0;class#BebidasActivity#0" expanded="false" />
             <element signature="method#voltar#0;class#BebidasActivity#0" expanded="false" />
+            <element signature="method#proximo#0;class#BebidasActivity#0" expanded="false" />
             <element signature="method#readCSV#0;class#BebidasActivity#0" expanded="false" />
+            <element signature="method#writeCSV#0;class#BebidasActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>

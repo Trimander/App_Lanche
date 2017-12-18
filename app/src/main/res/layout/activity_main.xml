@@ -11,48 +11,6 @@
         android:layout_height="match_parent"
         android:background="@color/Fundo">
 
-        <TextView
-            android:id="@+id/tvPedidosAndamento"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pedidos em Andamento"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:textSize="20dp"
-            android:layout_marginTop="10dp"/>
-
-        <LinearLayout
-            android:id="@+id/LL1"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:orientation="horizontal"
-            android:background="@drawable/border_radius"
-            android:layout_below="@+id/tvPedidosAndamento"
-            android:layout_alignParentStart="true"
-            android:layout_margin="10dp">
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/tvPedidosConcluidos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:text="Pedidos Concluídos"
-            android:textSize="20dp"/>
-
-        <LinearLayout
-            android:id="@+id/LL2"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:orientation="horizontal"
-            android:background="@drawable/border_radius"
-            android:layout_below="@+id/tvPedidosConcluidos"
-            android:layout_alignParentStart="true"
-            android:layout_margin="10dp">
-
-        </LinearLayout>
 
         <Button
             android:id="@+id/btnNovoPedido"
@@ -66,6 +24,16 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:background="@color/Botao"/>
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnNovoPedido"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="75dp"
+            android:alpha="0.5"
+            app:srcCompat="@drawable/logo" />
 
     </RelativeLayout>
 

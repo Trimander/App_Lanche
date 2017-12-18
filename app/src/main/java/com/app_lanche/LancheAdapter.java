@@ -71,9 +71,6 @@ public class LancheAdapter extends BaseAdapter{
         final TextView valor = (TextView)v.findViewById(R.id.txtValorItem);
         valor.setText(sample.getValor());
 
-       //  Bundle bundle = new Bundle();
-      //  bundle.putStringArray();
-
         ImageButton btnGo = (ImageButton)v.findViewById(R.id.btnAdd);
         btnGo.setOnClickListener(new View.OnClickListener() {
             @Override
