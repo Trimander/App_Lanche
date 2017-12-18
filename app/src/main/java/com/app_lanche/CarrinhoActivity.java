@@ -27,7 +27,7 @@ public class CarrinhoActivity extends AppCompatActivity {
     private TextView tvPreco;
     private TextView tvTamanhoBebida;
 
-    //double total;
+    double total = 0;
 
     String baseDir = Environment.getExternalStorageDirectory().getAbsolutePath();
     String fileName = "/Download/carrinho.csv";
@@ -40,6 +40,8 @@ public class CarrinhoActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        btnVoltar = (Button) findViewById(R.id.btnVoltar);
+        btnFinalizar = (Button) findViewById(R.id.btnFinalizar);
         tvNomeLanche = (TextView) findViewById(R.id.tvNomeLanche);
         tvQuantidadeLanche = (TextView) findViewById(R.id.tvQuantidadeLanche);
         tvPrecoLanche = (TextView) findViewById(R.id.tvPrecoLanche);
@@ -49,25 +51,15 @@ public class CarrinhoActivity extends AppCompatActivity {
         tvPrecoBebida = (TextView) findViewById(R.id.tvPrecoBebida);
         tvPreco = (TextView) findViewById(R.id.tvPreco3);
 
+        carregarCarrinhoLanche();
+        carregarCarrinhoBebida();
         voltar();
         finalizar();
-        //calculaTotal();
+        calculaTotal();
 
-        String[] data = readCSV(filePath);
-        tvNomeLanche.setText(data[0].toString());
-        tvQuantidadeLanche.setText(data[2].toString());
-        tvPrecoLanche.setText(data[3].toString());
-        tvNomeBebida.setText(data[4].toString());
-        tvTamanhoBebida.setText(data[5].toString());
-        tvQuantidadeBebida.setText(data[6].toString());
-        tvPrecoBebida.setText(data[7].toString());
-
-       // tvPreco.setText(String.valueOf(String.valueOf(total)));
     }
 
     public void voltar(){
-        btnVoltar = (Button) findViewById(R.id.btnVoltar);
-
         btnVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,8 +70,6 @@ public class CarrinhoActivity extends AppCompatActivity {
     }
 
     public void finalizar(){
-        btnFinalizar = (Button) findViewById(R.id.btnFinalizar);
-
         btnFinalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -109,6 +99,44 @@ public class CarrinhoActivity extends AppCompatActivity {
     }
 
     public void calculaTotal(){
-          //  total = Double.parseDouble(tvPrecoLanche.getText().toString()) + Double.parseDouble(tvPrecoBebida.getText().toString());
+        if(tvPrecoLanche.length() == 0 || tvPrecoLanche == null || tvPrecoLanche.equals("")){
+        } else{
+            total += Double.parseDouble(tvPrecoLanche.getText().toString());
+        }
+        if(tvPrecoBebida.length() == 0 || tvPrecoBebida == null || tvPrecoBebida.equals("")){
+        }else{
+            total += Double.parseDouble(tvPrecoBebida.getText().toString());
+        }
+        tvPreco.setText(String.valueOf(total));
+    }
+
+    public void carregarCarrinhoLanche(){
+        String[] data = readCSV(filePath);
+        if(!data[2].equals("")) {
+            tvNomeLanche.setText(data[0]);
+            tvQuantidadeLanche.setText(data[2]);
+            tvPrecoLanche.setText(data[3]);
+        }else{
+            tvNomeLanche.setText("");
+            tvQuantidadeLanche.setText("");
+            tvPrecoLanche.setText("");
+        }
+    }
+
+    public void carregarCarrinhoBebida(){
+        String[] data = readCSV(filePath);
+        if(!data[6].equals("")){
+            tvNomeBebida.setText(data[4]);
+            tvTamanhoBebida.setText(data[5]);
+            tvQuantidadeBebida.setText(data[6]);
+            tvPrecoBebida.setText(data[7]);
+        }else{
+            tvNomeBebida.setText("");
+            tvTamanhoBebida.setText("");
+            tvQuantidadeBebida.setText("");
+            tvPrecoBebida.setText("");
+        }
+
+
     }
 }

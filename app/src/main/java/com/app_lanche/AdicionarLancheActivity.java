@@ -3,6 +3,7 @@ package com.app_lanche;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
@@ -14,6 +15,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -28,7 +30,6 @@ public class AdicionarLancheActivity extends AppCompatActivity {
     private TextView tvPreco2;
     private TextView tvPreco;
     private TextView tvdescricao;
-    private TextView tvAdd;
     private CheckBox cbBacon;
     private CheckBox cbCebola;
     private CheckBox cbOvo;
@@ -65,7 +66,6 @@ public class AdicionarLancheActivity extends AppCompatActivity {
         btnVoltar = (Button) findViewById(R.id.btnVoltar);
         tvPreco = (TextView) findViewById(R.id.tvPreco3);
         btnAdicionar = (Button) findViewById(R.id.btnAdicionar);
-        tvAdd = (TextView) findViewById(R.id.tvAdd);
 
         tvNome.setText(getIntent().getExtras().getString("nome"));
         tvPreco2.setText(getIntent().getExtras().getString("valor"));
@@ -93,16 +93,23 @@ public class AdicionarLancheActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(etQuantidade.length()== 0 || etQuantidade == null || etQuantidade.equals("")) {
+                    if(!temCSV(filePath)){
+                        String[] data = {"", "", "", ""};
+                        writeCSV(filePath, data);
+                    }
+
                     Intent intent = new Intent(AdicionarLancheActivity.this, BebidasActivity.class);
                     startActivity(intent);
+
                 }
                 else{
+                    String aux = "";
                     for (String str : list) {
-                        tvAdd.setText(tvAdd.getText().toString() + str + " ");
+                        aux += str + "";
                     }
 
                     nome = tvNome.getText().toString();
-                    adicionais = tvAdd.getText().toString();
+                    adicionais = aux;
                     quantidade = String.valueOf(etQuantidade.getText());
                     preco = String.valueOf(String.valueOf(total));
 
@@ -261,12 +268,13 @@ public class AdicionarLancheActivity extends AppCompatActivity {
                     return;
                 }
                 else{
+                    String aux = "";
                     for (String str : list) {
-                        tvAdd.setText(tvAdd.getText().toString() + str + " ");
+                        aux += str + " ";
                     }
 
                     nome = tvNome.getText().toString();
-                    adicionais = tvAdd.getText().toString();
+                    adicionais = aux;
                     quantidade = String.valueOf(etQuantidade.getText());
                     preco = String.valueOf(String.valueOf(total));
 
@@ -300,5 +308,33 @@ public class AdicionarLancheActivity extends AppCompatActivity {
         }catch (IOException e){
             e.printStackTrace();
         }
+    }
+
+    @NonNull
+    private String[] readCSV(String filePath){
+        String data = "";
+        try{
+                FileInputStream fis = new FileInputStream(new File(filePath));
+
+                int temp;
+                while ((temp = fis.read()) != -1) {
+                    data += (char) temp;
+                }
+
+        }catch (FileNotFoundException e){
+            e.printStackTrace();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+        return data.split(",");
+    }
+
+    private boolean temCSV(String filePath){
+        File file = new File(filePath);
+        if(file.exists()){
+            return true;
+        }
+        return false;
     }
 }

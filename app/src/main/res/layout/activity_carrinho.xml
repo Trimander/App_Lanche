@@ -135,7 +135,19 @@
                 android:layout_alignBaseline="@+id/tvQuantidadeBebida"
                 android:layout_alignBottom="@+id/tvQuantidadeBebida"
                 android:layout_alignParentEnd="true" />
+
         </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            android:textSize="20dp"
+            android:layout_alignBaseline="@+id/tvRS"
+            android:layout_alignBottom="@+id/tvRS"
+            android:layout_toStartOf="@+id/tvRS"
+            android:layout_marginEnd="11dp" />
 
         <TextView
             android:id="@+id/tvRS"
@@ -143,10 +155,9 @@
             android:layout_height="wrap_content"
             android:text="R$ "
             android:textSize="20dp"
+            android:layout_marginBottom="51dp"
             android:layout_above="@+id/btnFinalizar"
-            android:layout_toStartOf="@+id/tvPreco3"
-            android:layout_marginEnd="14dp"
-            android:layout_marginBottom="51dp" />
+            android:layout_toStartOf="@+id/tvPreco3" />
 
         <TextView
             android:id="@+id/tvPreco3"

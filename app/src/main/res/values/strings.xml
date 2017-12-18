@@ -5,13 +5,13 @@
 
     <string-array name="itensTamnho">
         <item>2 Litros</item>
-        <item>1,5 Litros</item>
+        <item>1.5 Litros</item>
         <item>600 ml</item>
         <item>Lata</item>
     </string-array>
 
     <string-array name="itensBebida">
-        <item>Guaraná</item>
+        <item>Guarana</item>
         <item>Coca-Cola</item>
         <item>Fanta</item>
         <item>Suco</item>

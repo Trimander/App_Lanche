@@ -83,7 +83,6 @@ public class BebidasActivity extends AppCompatActivity {
                     quantidade = String.valueOf(etQuantidade.getText());
                     preco = String.valueOf(String.valueOf(total));
 
-                    //String[] data = readCSV(filePath);
                     String[] data2 = {"", bebida, tamanho, quantidade, preco};
 
                     writeCSV(filePath, data2);
@@ -199,8 +198,29 @@ public class BebidasActivity extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BebidasActivity.this, PagamentoActivity.class);
-                startActivity(intent);
+                if(etQuantidade.length()== 0 || etQuantidade == null || etQuantidade.equals("")) {
+                    String[] data2 = {"", "", "", "", ""," "};
+
+                    writeCSV(filePath, data2);
+                    Toast.makeText(BebidasActivity.this, "Entrou no if", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(BebidasActivity.this, PagamentoActivity.class);
+                    startActivity(intent);
+                }
+                else {
+                    bebida = spinner2.getSelectedItem().toString();
+                    tamanho = spinner1.getSelectedItem().toString();
+                    quantidade = String.valueOf(etQuantidade.getText());
+                    preco = String.valueOf(String.valueOf(total));
+
+                    String[] data2 = {"", bebida, tamanho, quantidade, preco};
+
+                    writeCSV(filePath, data2);
+                    Toast.makeText(BebidasActivity.this, "Adicionado ao carrinho", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(BebidasActivity.this, PagamentoActivity.class);
+                    startActivity(intent);
+
+                }
+
             }
         });
 
